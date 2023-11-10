@@ -1,0 +1,69 @@
+body {  
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background-color: rgb(195, 163, 195);
+    margin: 0;
+}
+
+#root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.championSlot {
+    width: 400px;
+    height: 400px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 30px;
+    border-radius: 360px;
+}
+
+.rotatingBorder {
+    width: 400px;
+    height: 400px;
+    
+    position: fixed;
+    animation: rotate 5s infinite linear;
+
+    background: linear-gradient(black 76%, gold);
+    border-radius: 360px;
+}
+
+.championIconHolder {
+    width: 380px;
+    height: 380px;
+    
+    z-index: 1;
+    border-radius: 360px;
+    overflow: hidden;
+}
+
+.championIcon {
+    transition: 200ms;
+    border-radius: 360px;
+}
+
+.championSlot:hover .championIcon{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.championSlot:hover .rotatingBorder {
+    background: linear-gradient(black 76%, rgb(231, 0, 0));
+    animation: rotate 2s infinite linear reverse;
+}
+
+@keyframes rotate {
+    100% {
+        rotate: 360deg;
+    }
+}

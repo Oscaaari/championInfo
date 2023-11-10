@@ -1,10 +1,12 @@
 function ChampionCards(props) {
-        return (
-            <article key={props.index}>
-                <p>{props.name}</p>
-                <img src={props.icon}></img>
-            </article>
-        );
+    return (
+        <div className="championSlot">
+            <div className="rotatingBorder"></div>
+            <div className="championIconHolder">
+                <img className="championIcon" src={props.championIcon} />
+            </div>
+        </div>
+    );
 }
 
 export default ChampionCards;
